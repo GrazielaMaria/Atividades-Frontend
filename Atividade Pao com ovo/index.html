@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Qual sua comida?</h1>
+
+    <input type="text" id="comida" placeholder= "Digite uma refeição" >
+    <button onclick="verificarcomida()">Enviar</button>
+
+    <p id="mensagem"></p>
+ 
+    
+    <script>
+    function verificarcomida() {
+        let input = document.getElementById("comida");
+        let paragrafo = document.getElementById("mensagem");
+        let comida = input.value.toLowerCase().trim();
+
+        if (comida === "pão com ovo") {
+            paragrafo.textContent = "Café da manhã!";
+        }
+        else if (comida === "feijao com arroz") {
+            paragrafo.textContent = "Almoço";
+        }
+        else {
+            paragrafo.textContent = "Jantar";         
+        }
+    }
+    </script>
+</body>
+</html>
